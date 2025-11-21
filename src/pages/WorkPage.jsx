@@ -52,21 +52,21 @@ const WorkPage = () => {
   ]
 
   return (
-    <section className="relative min-h-screen py-32 overflow-hidden">
+    <section className="relative min-h-screen py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div className="mb-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
-          <h1 className="text-5xl md:text-7xl font-bold text-cyan-400 mb-4 font-mono">PORTFOLIO.EXECUTE()</h1>
-          <p className="text-lg text-slate-300 max-w-2xl">
+        <motion.div className="mb-12 sm:mb-16 md:mb-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-cyan-400 mb-4 font-mono">PORTFOLIO.EXECUTE()</h1>
+          <p className="text-base sm:text-lg text-slate-300 max-w-2xl">
             Showcasing a collection of projects spanning video editing, visual effects, and digital innovation
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-orange-500 mt-6"></div>
+          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-cyan-500 to-orange-500 mt-4 sm:mt-6"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              className={`p-8 rounded-xl border backdrop-blur-sm transition-all hover:shadow-lg group ${
+              className={`p-6 sm:p-8 rounded-xl border backdrop-blur-sm transition-all hover:shadow-lg group ${
                 project.accent === "cyan"
                   ? "border-cyan-500/30 hover:border-cyan-400 hover:shadow-cyan-500/20 bg-cyan-500/5"
                   : "border-orange-500/30 hover:border-orange-400 hover:shadow-orange-500/20 bg-orange-500/5"
@@ -81,20 +81,20 @@ const WorkPage = () => {
                   className={`w-2 h-2 mt-1.5 rounded-full ${project.accent === "cyan" ? "bg-cyan-500" : "bg-orange-500"}`}
                 ></div>
                 <h3
-                  className={`text-2xl font-mono font-bold ${project.accent === "cyan" ? "text-cyan-400" : "text-orange-400"}`}
+                  className={`text-xl sm:text-2xl font-mono font-bold ${project.accent === "cyan" ? "text-cyan-400" : "text-orange-400"}`}
                 >
                   {project.title}
                 </h3>
               </div>
 
-              <p className="text-slate-300 mb-4 leading-relaxed">{project.description}</p>
-              <p className="text-slate-400 text-sm mb-6 leading-relaxed">{project.details}</p>
+              <p className="text-slate-300 mb-4 leading-relaxed text-sm sm:text-base">{project.description}</p>
+              <p className="text-slate-400 text-xs sm:text-sm mb-6 leading-relaxed">{project.details}</p>
 
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2">
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
-                    className={`text-xs px-3 py-1 rounded-full border ${
+                    className={`text-xs px-2 py-1 sm:px-3 sm:py-1 rounded-full border ${
                       project.accent === "cyan"
                         ? "border-cyan-500/50 text-cyan-300 bg-cyan-500/10"
                         : "border-orange-500/50 text-orange-300 bg-orange-500/10"
@@ -106,7 +106,7 @@ const WorkPage = () => {
               </div>
 
               <motion.button
-                className={`w-full py-2 px-4 rounded-lg border font-mono text-sm font-bold transition-all ${
+                className={`w-full py-2 px-4 rounded-lg border font-mono text-sm font-bold transition-all mt-6 ${
                   project.accent === "cyan"
                     ? "border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/20"
                     : "border-orange-500/50 text-orange-400 hover:bg-orange-500/20"
