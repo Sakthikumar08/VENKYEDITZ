@@ -84,32 +84,110 @@ const AboutPage = () => {
           </motion.div>
         </div>
 
-        {/* Experience */}
+        {/* Instagram Activity */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-12 p-8 rounded-xl border border-cyan-500/30 bg-cyan-500/5 backdrop-blur-sm"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-12 p-8 rounded-xl border border-cyan-500/30 bg-cyan-500/5 backdrop-blur-sm"
         >
-          <h2 className="text-2xl font-mono font-bold text-cyan-400 mb-8">EXPERIENCE</h2>
-          <div className="space-y-6">
-            {experience.map((exp, index) => (
-              <motion.div
-                key={index}
-                className="flex items-start gap-6 p-4 rounded-lg border border-cyan-500/20 hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all"
-                whileHover={{ x: 5 }}
-              >
-                <div className="text-cyan-400 font-mono text-sm font-bold min-w-max">{exp.year}</div>
-                <div>
-                  <h4 className="text-lg font-mono font-bold text-cyan-300 mb-1">{exp.role}</h4>
-                  <p className="text-slate-400">{exp.company}</p>
+          <h2 className="text-2xl font-mono font-bold text-cyan-400 mb-6">INSTAGRAM.ACTIVITY()</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-orange-500 mb-8"></div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Instagram Profile Embed */}
+            <div className="bg-slate-900/50 rounded-lg overflow-hidden border border-cyan-500/20">
+              <div className="relative pt-[100%]">
+                <iframe 
+                  src="https://www.instagram.com/venkyfx__/embed/" 
+                  className="absolute top-0 left-0 w-full h-full"
+                  frameBorder="0" 
+                  scrolling="no" 
+                  allowTransparency="true"
+                  title="Instagram Profile"
+                ></iframe>
+              </div>
+            </div>
+            
+            {/* Instagram Analytics */}
+            <div>
+              <h3 className="text-xl font-mono font-bold text-orange-400 mb-6">ANALYTICS.OVERVIEW()</h3>
+              
+              <div className="space-y-6">
+                <div className="p-4 rounded-lg border border-cyan-500/20 bg-cyan-500/10">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-slate-300 font-mono">Followers</span>
+                    <span className="text-cyan-400 font-mono font-bold">200K+</span>
+                  </div>
+                  <div className="h-2 bg-slate-800 rounded-full overflow-hidden border border-cyan-500/20">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full"
+                      initial={{ width: 0 }}
+                      animate={{ width: "95%" }}
+                      transition={{ duration: 1, delay: 0.3 }}
+                    />
+                  </div>
                 </div>
-              </motion.div>
-            ))}
+                
+                <div className="p-4 rounded-lg border border-orange-500/20 bg-orange-500/10">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-slate-300 font-mono">Engagement Rate</span>
+                    <span className="text-orange-400 font-mono font-bold">15.7%</span>
+                  </div>
+                  <div className="h-2 bg-slate-800 rounded-full overflow-hidden border border-orange-500/20">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-orange-500 to-orange-400 rounded-full"
+                      initial={{ width: 0 }}
+                      animate={{ width: "85%" }}
+                      transition={{ duration: 1, delay: 0.4 }}
+                    />
+                  </div>
+                </div>
+                
+                <div className="p-4 rounded-lg border border-cyan-500/20 bg-cyan-500/10">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-slate-300 font-mono">Monthly Views</span>
+                    <span className="text-cyan-400 font-mono font-bold">8M+</span>
+                  </div>
+                  <div className="h-2 bg-slate-800 rounded-full overflow-hidden border border-cyan-500/20">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full"
+                      initial={{ width: 0 }}
+                      animate={{ width: "90%" }}
+                      transition={{ duration: 1, delay: 0.5 }}
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4 mt-6">
+                  <div className="text-center p-3 rounded-lg border border-cyan-500/20 bg-cyan-500/10">
+                    <p className="text-xl font-mono font-bold text-cyan-400">1.2M</p>
+                    <p className="text-slate-400 text-xs mt-1">Likes/Month</p>
+                  </div>
+                  <div className="text-center p-3 rounded-lg border border-orange-500/20 bg-orange-500/10">
+                    <p className="text-xl font-mono font-bold text-orange-400">85K</p>
+                    <p className="text-slate-400 text-xs mt-1">Comments/Month</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-8 p-6 rounded-lg border border-orange-500/30 bg-orange-500/5">
+            <h3 className="text-lg font-mono font-bold text-orange-400 mb-4">INSTAGRAM.INSIGHTS()</h3>
+            <p className="text-slate-300 leading-relaxed">
+              My Instagram presence focuses on showcasing behind-the-scenes content, creative processes, and finished projects. 
+              With a consistent posting schedule and high engagement rate, the account has become a valuable platform for 
+              connecting with clients and collaborators in the video editing industry.
+            </p>
+            <p className="text-slate-300 mt-3 leading-relaxed">
+              The content strategy emphasizes visual storytelling, technical tutorials, and creative inspiration, 
+              which has helped build a loyal community of over 200K followers who actively engage with the posts.
+            </p>
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 mt-12">
           {/* Toolkit */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -159,6 +237,31 @@ const AboutPage = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Experience */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mt-12 p-8 rounded-xl border border-cyan-500/30 bg-cyan-500/5 backdrop-blur-sm"
+        >
+          <h2 className="text-2xl font-mono font-bold text-cyan-400 mb-8">EXPERIENCE</h2>
+          <div className="space-y-6">
+            {experience.map((exp, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start gap-6 p-4 rounded-lg border border-cyan-500/20 hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all"
+                whileHover={{ x: 5 }}
+              >
+                <div className="text-cyan-400 font-mono text-sm font-bold min-w-max">{exp.year}</div>
+                <div>
+                  <h4 className="text-lg font-mono font-bold text-cyan-300 mb-1">{exp.role}</h4>
+                  <p className="text-slate-400">{exp.company}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   )

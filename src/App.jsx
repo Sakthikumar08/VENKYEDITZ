@@ -5,8 +5,9 @@ import { Routes, Route } from "react-router-dom"
 import Lenis from "lenis"
 import Navbar from "./components/Navbar"
 import Preloader from "./components/Preloader"
+import SocialLinks from "./components/SocialLinks"
 import HomePage from "./pages/HomePage"
-import WorkPage from "./pages/WorkPage"
+import ReelsPage from "./pages/ReelsPage"
 import GalleryPage from "./pages/GalleryPage"
 import AboutPage from "./pages/AboutPage"
 import ContactPage from "./pages/ContactPage"
@@ -41,10 +42,13 @@ function App() {
     <div className="App bg-slate-950 text-white overflow-x-hidden">
       <Preloader />
       <Navbar />
+      <div className="absolute top-8 right-0 z-20">
+        <SocialLinks variant="horizontal" position="top" />
+      </div>
       <main className="relative">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/work" element={<WorkPage />} />
+          <Route path="/reels" element={<ReelsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />

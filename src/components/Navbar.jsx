@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { motion } from "framer-motion"
-import { FiHome, FiCode, FiImage, FiUser, FiMail, FiFolder, FiMenu, FiX } from "react-icons/fi"
+import { FiHome, FiFilm, FiImage, FiUser, FiMail, FiFolder, FiMenu, FiX } from "react-icons/fi"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -20,10 +20,10 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", path: "/", icon: FiHome },
-    { name: "Work", path: "/work", icon: FiCode },
+    { name: "About", path: "/about", icon: FiUser },
+    { name: "Reels", path: "/reels", icon: FiFilm },
     { name: "Gallery", path: "/gallery", icon: FiImage },
     { name: "Projects", path: "/projects", icon: FiFolder },
-    { name: "About", path: "/about", icon: FiUser },
     { name: "Contact", path: "/contact", icon: FiMail },
   ]
 

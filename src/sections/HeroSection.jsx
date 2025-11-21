@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import HUDBackground from "../components/HUD/HUDBackground"
-import SocialLinks from "../components/SocialLinks"
 import { useState } from "react"
 import Profile from "../assets/venky-pic.png"
 
@@ -12,10 +11,6 @@ const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <HUDBackground />
-
-      <div className="absolute top-8 right-0 z-20">
-        <SocialLinks variant="horizontal" position="top" />
-      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen">

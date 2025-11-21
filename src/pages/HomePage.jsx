@@ -1,7 +1,8 @@
 "use client"
 
 import HeroSection from "../sections/HeroSection"
-import VideoSection from "../sections/VideoSection"
+import WorkPageSection from "../sections/WorkPageSection"
+import HomePreviewSection from "../sections/HomePreviewSection"
 import ShowcaseSection from "../sections/ShowcaseSection"
 import ToolsScrollSection from "../sections/ToolsScrollSection"
 
@@ -10,7 +11,8 @@ const HomePage = () => {
     <>
       <HeroSection />
       <ToolsScrollSection />
-      <VideoSection />
+      <WorkPageSection />
+      <HomePreviewSection />
       
     </>
   )
